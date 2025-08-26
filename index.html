@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIT-GO Vezérlő</title>
+  <link rel="stylesheet" href="css/pico.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.png" alt="AIT-GO Logo">
+    </div>
+    <div class="header-title">Tréneri Felület</div>
+    <div id="header-clock">--:--:--</div>
+  </header>
+  
+  <div class="main-container">
+    <aside>
+      <nav id="main-nav">
+        <a href="#" id="nav-clients"></a>
+        <a href="#" id="nav-calibration"></a>
+        <a href="#" id="nav-activate"></a>
+        <a href="#" id="nav-log"></a>
+      </nav>
+      
+      <div class="sidebar-footer">
+  <div id="lang-selector-container">
+    </div>
+
+  <footer class="copyright-info">
+  <small>
+    Bacsó László<br>
+    +36 20 914-3350<br>
+    support@ait-go.com<br>
+    &copy; <span id="copyright-year"></span> All Rights Reserved.
+  </small>
+</footer>
+</div>
+    </aside>
+
+    <main id="content-area">
+      <progress></progress>
+    </main>
+  </div>
+<div id="modal-overlay" class="hidden">
+    <div id="modal-content">
+      </div>
+  </div>
+
+  <div id="notification"></div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
