@@ -200,3 +200,73 @@ aside a svg { flex-shrink: 0; }
   gap: 1rem;
   margin-top: 2rem;
 }
+/* --- RESZPONZÍV BEÁLLÍTÁSOK --- */
+/* A szabályok akkor lépnek érvénybe, ha a képernyő szélessége 768px vagy annál kisebb */
+
+@media (max-width: 768px) {
+  
+  /* Az alapvető elrendezés egyoszloposra vált */
+  .main-container {
+    grid-template-columns: 1fr; /* Két oszlop helyett egy */
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  body {
+    overflow: auto; /* A body görgethető lesz a mobilnézetben */
+  }
+
+  /* Az oldalsávból egy felső menüsáv lesz */
+  aside {
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+  }
+
+  /* A navigációs gombok vízszintesen helyezkednek el és görgethetőek */
+  aside nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Vízszintes görgetés, ha nem férnek ki */
+    padding-bottom: 1rem;
+  }
+
+  aside a {
+    flex-shrink: 0; /* A gombok ne zsugorodjanak össze */
+    margin-bottom: 0;
+  }
+
+  /* A sidebar alja (nyelvválasztó, copyright) is igazodik */
+  .sidebar-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .copyright-info {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    text-align: right;
+  }
+  #lang-selector-container {
+    margin-top: 0;
+  }
+
+  /* A fő tartalom és a fejléc is kap egy kis finomhangolást */
+  main {
+    padding: 1.5rem 1rem; /* Kisebb margók mobilon */
+  }
+  
+  .header-title, #header-clock {
+    font-size: 1.2rem; /* Kisebb betűméret a fejlécben, hogy elférjen */
+  }
+
+  /* Az audiogram konténer is egyoszloposra vált */
+  .audiogram-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

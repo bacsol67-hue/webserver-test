@@ -24,6 +24,28 @@ const mockStrings = {
     `,
     "volume_set_for_age_asd": "Egységes hangerő beállítva (alacsony életkor / autizmus spektrumzavar miatt).",
     "stuttering_volume_reduction": "Beszédzavar: bal hangerő csökkentve (11-20. alkalom).",
+    "modal_pre_activation_check_title": "Aktiválás Előtti Ellenőrzés",
+    "modal_bt_status": "Bluetooth",
+    "modal_bt_connected": "Csatlakoztatva",
+    "modal_bt_disconnected": "Nincs kapcsolat",
+    "modal_device_battery": "Eszköz Akkumulátor",
+    "modal_headphone_battery": "Fejhallgató Akkumulátor",
+    "modal_battery_unknown": "Ismeretlen",
+    "modal_warning_title": "Figyelem:",
+    "modal_warning_bt_disconnected": "Nincs Bluetooth fejhallgató csatlakoztatva!",
+    "modal_warning_device_low_battery": "Az eszköz akkumulátora hamarosan lemerül!",
+    "modal_warning_headphone_low_battery": "A fejhallgató akkumulátora hamarosan lemerül!",
+    "modal_success_message": "Minden rendben, az eszköz készen áll az aktiválásra.",
+    "modal_button_cancel": "Mégse",
+    "modal_button_activate_anyway": "Aktiválás Mindenképp",
+    "modal_button_activate": "Aktiválás",
+    "header_title": "Tréneri Felület",
+    "age_label": "Életkor",
+    "age_not_specified": "Nincs megadva",
+    "age_invalid_date": "Érvénytelen dátum",
+    "age_year": "év",
+    "age_month": "hónap",
+    "no_data_available": "Nincs adat",
     "clients_title": "Kliensek",
     "new_client_btn": "Új Kliens Hozzáadása",
     "datasheet_title": "Kliens Adatlap",
@@ -105,8 +127,8 @@ const mockStrings = {
     "sync_title": "AIT-GO Eszköz Aktiválása",
     "sync_status_title": "Eszköz Jelenlegi Állapota",
     "sync_last_sync": "Az AIT-tréning kezdete",
-    "training_end_date": "Várható tréning befejezés",
     "sync_synced_clients": "A tréningen részt vevő(k)",
+    "training_end_date": "Várható tréning befejezés",
     "sync_no_clients": "Nincsenek kliensek az eszközön.",
     "sync_select_clients_title": "Aktiválandó Kliensek Kiválasztása",
     "sync_select_all": "Összes kijelölése",
@@ -121,7 +143,6 @@ const mockStrings = {
   "en": {
     "language_name": "English",
     "language_label": "Language",
-    // --- RENAMED AND FORMATTED ---
     "nav_clients": `
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
       Clients
@@ -138,18 +159,149 @@ const mockStrings = {
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
       Log
     `,
-    // --- NEW MESSAGES ---
     "volume_set_for_age_asd": "Flat volume set (due to young age / autism spectrum disorder).",
     "stuttering_volume_reduction": "Stuttering: left volume reduced (sessions 11-20).",
-
-    "clients_title": "Clients", "new_client_btn": "Add New Client", "datasheet_title": "Client Datasheet", "basic_info_title": "Basic Info", "name_label": "Name", "dob_label": "Date of Birth", "diagnostics_title": "Diagnostic Data", "asd_label": "Autism spectrum disorder", "stuttering_label": "Speech and language disorder", "audiogram_label": "Has audiogram data", "audiogram_results_title": "Audiological Results", "audiogram_input_title": "Enter the audiological test results!", "left_ear": "Left ear", "right_ear": "Right ear", "evaluate_title": "Evaluation", "plan_gen_title": "Plan Generation", "basic_btn": "Basic Settings", "recommended_btn": "Recommended Settings", "evaluate_btn": "Evaluate", "training_plan_title": "Detailed Training Plan", "session": "session", "volume_l": "Left volume", "volume_r": "Right volume", "filters": "Filters", "save_btn": "Save", "cancel_btn": "Cancel", "delete_btn": "Delete Client", "delete_confirm": "Are you sure you want to delete this client? This action cannot be undone.", "back_btn": "Back to list", "edit_btn": "Edit", "action_header": "Action", "name_header": "Name", "page_under_dev": "This section is under development.", "save_success": "Saved successfully!", "delete_success": "Client deleted!", "basic_plan_applied": "Basic settings applied!", "recommendation_generated": "Recommended settings have been generated and applied!", "recommendation_requires_audiogram": "Recommended settings require saved audiogram data!", "no_filter_needed": "No filtering needed.", "filters_set": "Filters set:", "right_ear_eval": "Right ear", "left_ear_eval": "Left ear", "avg_short": "avg", "peaks_short": "Peaks considered for filtering", "hearing_loss_recommendation": "Filters are not recommended due to hearing loss.", "too_many_peaks_recommendation": "Filters are not recommended due to too many combined peaks.", "training_repeat_recommended": "Repetition of the training is recommended in 6-9 months.", "dominance_title": "Ear Dominance", "dominant_ear": "Dominant ear", "sound_sensitivity_title": "More sensitive hearing than average", "points_below_zero_db": "point(s) below 0 dB", "pta_title": "Pure Tone Average (PTA)", "medical_warning": "Warning: Results contain values outside the normal hearing range. Medical/audiological examination is recommended.", "clients_instructions": "This is where the training is personalized, audiograms are evaluated, and the 10-day training plan is precisely configured. To add a new client, click the button, or select an existing one to edit.", "sync_instructions": "On this page, you can copy the selected clients' data to the AIT-GO device. Please check the device status and select the clients to sync.", "log_instructions": "The event log records important events during the device's operation, such as session starts or Bluetooth connection status.", "calib_title": "Headphone Calibration", "calib_instructions": "Place the sound level meter on the headphone's earcup. After starting the calibration, the system will automatically set the volume levels. At each level, enter the measured dB value, then click the 'Record' button.", "calib_start_btn": "Start Calibration", "calib_step_title": "Measurement", "calib_volume_level": "Set Volume", "calib_measured_db": "Measured Value (dB)", "calib_record_btn": "Record", "calib_table_header_percent": "Set Volume (%)", "calib_table_header_db": "Measured dB", "calib_finish_btn": "Save Calibration to Device", "calib_complete_title": "Calibration Complete", "calib_complete_text": "The values have been recorded. Click the button below to save.", "calib_success_notification": "Calibration saved successfully!", "log_title": "Event Log", "log_refresh_btn": "Refresh Log", "log_download_btn": "Download Log (CSV)", "log_clear_btn": "Clear Log", "log_clear_confirm": "Are you sure you want to delete the entire event log from the device? This action cannot be undone.", "log_cleared_notification": "Log cleared successfully.", "log_table_header_time": "Timestamp", "log_table_header_event": "Event", "log_table_header_details": "Details", "sync_title": "AIT-GO Device Activation", "sync_status_title": "Current Device Status", "sync_last_sync": "AIT Training Start", "sync_synced_clients": "Training Participant(s)", "training_end_date": "Expected Training End","sync_no_clients": "No clients on the device.", "sync_select_clients_title": "Select Clients to Activate", "sync_select_all": "Select All", "sync_deselect_all": "Deselect All", "sync_action_btn": "Activate Selected Clients on Device", "sync_success_notification": "Activation successful!", "sync_no_selection_alert": "Please select at least one client to activate.", "sync_clear_btn": "Clear Device Memory", "sync_clear_confirm": "Are you sure you want to delete all client data from the device? This will reset the device.", "sync_cleared_notification": "Device memory cleared successfully."
+    "modal_pre_activation_check_title": "Pre-Activation Check",
+    "modal_bt_status": "Bluetooth",
+    "modal_bt_connected": "Connected",
+    "modal_bt_disconnected": "Not connected",
+    "modal_device_battery": "Device Battery",
+    "modal_headphone_battery": "Headphone Battery",
+    "modal_battery_unknown": "Unknown",
+    "modal_warning_title": "Warning:",
+    "modal_warning_bt_disconnected": "No Bluetooth headphones connected!",
+    "modal_warning_device_low_battery": "The device battery is low!",
+    "modal_warning_headphone_low_battery": "The headphone battery is low!",
+    "modal_success_message": "Everything is OK, the device is ready for activation.",
+    "modal_button_cancel": "Cancel",
+    "modal_button_activate_anyway": "Activate Anyway",
+    "modal_button_activate": "Activate",
+    "header_title": "Trainer Interface",
+    "age_label": "Age",
+    "age_not_specified": "Not specified",
+    "age_invalid_date": "Invalid date",
+    "age_year": "years",
+    "age_month": "months",
+    "no_data_available": "No data available",
+    "clients_title": "Clients",
+    "new_client_btn": "Add New Client",
+    "datasheet_title": "Client Datasheet",
+    "basic_info_title": "Basic Info",
+    "name_label": "Name",
+    "dob_label": "Date of Birth",
+    "diagnostics_title": "Diagnostic Data",
+    "asd_label": "Autism spectrum disorder",
+    "stuttering_label": "Speech and language disorder",
+    "audiogram_label": "Has audiogram data",
+    "audiogram_results_title": "Audiological Results",
+    "audiogram_input_title": "Enter the audiological test results!",
+    "left_ear": "Left ear",
+    "right_ear": "Right ear",
+    "evaluate_title": "Evaluation",
+    "plan_gen_title": "Plan Generation",
+    "basic_btn": "Basic Settings",
+    "recommended_btn": "Recommended Settings",
+    "evaluate_btn": "Evaluate",
+    "training_plan_title": "Detailed Training Plan",
+    "session": "session",
+    "volume_l": "Left volume",
+    "volume_r": "Right volume",
+    "filters": "Filters",
+    "save_btn": "Save",
+    "cancel_btn": "Cancel",
+    "delete_btn": "Delete Client",
+    "delete_confirm": "Are you sure you want to delete this client? This action cannot be undone.",
+    "back_btn": "Back to list",
+    "edit_btn": "Edit",
+    "action_header": "Action",
+    "name_header": "Name",
+    "page_under_dev": "This section is under development.",
+    "save_success": "Saved successfully!",
+    "delete_success": "Client deleted!",
+    "basic_plan_applied": "Basic settings applied!",
+    "recommendation_generated": "Recommended settings have been generated and applied!",
+    "recommendation_requires_audiogram": "Recommended settings require saved audiogram data!",
+    "no_filter_needed": "No filtering needed.",
+    "filters_set": "Filters set:",
+    "right_ear_eval": "Right ear",
+    "left_ear_eval": "Left ear",
+    "avg_short": "avg",
+    "peaks_short": "Peaks considered for filtering",
+    "hearing_loss_recommendation": "Filters are not recommended due to hearing loss.",
+    "too_many_peaks_recommendation": "Filters are not recommended due to too many combined peaks.",
+    "training_repeat_recommended": "Repetition of the training is recommended in 6-9 months.",
+    "dominance_title": "Ear Dominance",
+    "dominant_ear": "Dominant ear",
+    "sound_sensitivity_title": "More sensitive hearing than average",
+    "points_below_zero_db": "point(s) below 0 dB",
+    "pta_title": "Pure Tone Average (PTA)",
+    "medical_warning": "Warning: Results contain values outside the normal hearing range. Medical/audiological examination is recommended.",
+    "clients_instructions": "This is where the training is personalized, audiograms are evaluated, and the 10-day training plan is precisely configured. To add a new client, click the button, or select an existing one to edit.",
+    "sync_instructions": "On this page, you can copy the selected clients' data to the AIT-GO device. Please check the device status and select the clients to sync.",
+    "log_instructions": "The event log records important events during the device's operation, such as session starts or Bluetooth connection status.",
+    "calib_title": "Headphone Calibration",
+    "calib_instructions": "Place the sound level meter on the headphone's earcup. After starting the calibration, the system will automatically set the volume levels. At each level, enter the measured dB value, then click the 'Record' button.",
+    "calib_start_btn": "Start Calibration",
+    "calib_step_title": "Measurement",
+    "calib_volume_level": "Set Volume",
+    "calib_measured_db": "Measured Value (dB)",
+    "calib_record_btn": "Record",
+    "calib_table_header_percent": "Set Volume (%)",
+    "calib_table_header_db": "Measured dB",
+    "calib_finish_btn": "Save Calibration to Device",
+    "calib_complete_title": "Calibration Complete",
+    "calib_complete_text": "The values have been recorded. Click the button below to save.",
+    "calib_success_notification": "Calibration saved successfully!",
+    "log_title": "Event Log",
+    "log_refresh_btn": "Refresh Log",
+    "log_download_btn": "Download Log (CSV)",
+    "log_clear_btn": "Clear Log",
+    "log_clear_confirm": "Are you sure you want to delete the entire event log from the device? This action cannot be undone.",
+    "log_cleared_notification": "Log cleared successfully.",
+    "log_table_header_time": "Timestamp",
+    "log_table_header_event": "Event",
+    "log_table_header_details": "Details",
+    "sync_title": "AIT-GO Device Activation",
+    "sync_status_title": "Current Device Status",
+    "sync_last_sync": "AIT Training Start",
+    "sync_synced_clients": "Training Participant(s)",
+    "training_end_date": "Expected Training End",
+    "sync_no_clients": "No clients on the device.",
+    "sync_select_clients_title": "Select Clients to Activate",
+    "sync_select_all": "Select All",
+    "sync_deselect_all": "Deselect All",
+    "sync_action_btn": "Activate Selected Clients on Device",
+    "sync_success_notification": "Activation successful!",
+    "sync_no_selection_alert": "Please select at least one client to activate.",
+    "sync_clear_btn": "Clear Device Memory",
+    "sync_clear_confirm": "Are you sure you want to delete all client data from the device? This will reset the device.",
+    "sync_cleared_notification": "Device memory cleared successfully."
   }
 };
+const getText = (key) => mockStrings[currentLang]?.[key] || mockStrings['en']?.[key] || `[${key}]`;
 let mockClients = [];
+
+// --- NYELVI BEÁLLÍTÁSOK KEZELÉSE ---
+let initialLang = 'hu'; // Alapértelmezett nyelv, ha minden más sikertelen.
+
+// 1. Van mentett nyelv a böngésző memóriájában?
+const userSavedLang = localStorage.getItem('language');
+if (userSavedLang && mockStrings[userSavedLang]) {
+  initialLang = userSavedLang;
+} else {
+  // 2. Ha nincs, a böngésző nyelvét támogatjuk? (pl. 'en-US' -> 'en')
+  const browserLang = navigator.language.substring(0, 2);
+  if (mockStrings[browserLang]) {
+    initialLang = browserLang;
+  }
+}
+
+let currentLang = initialLang;
+
 let mockDeviceState = {
-    lastSync: "Nincs adat",
+    lastSync: null, // "Nincs adat" helyett null
     syncedClients: [],
-    trainingEndDate: null // <-- ÚJ SOR
+    trainingEndDate: null
 };
 let mockLogData = `2025-08-22 08:00:15;DEVICE_BOOT;;
 2025-08-22 08:01:22;BT_CONNECTED;JBL Tune500BT;`;
@@ -160,14 +312,14 @@ let isFormDirty = false;
 const CALIB_STEPS = [20, 30, 40, 50, 60, 70, 80, 90];
 let currentCalibStepIndex = 0;
 let calibrationData = [];
-let currentLang = 'hu';
+
 let currentPage = 'clients';
 const AUDIOGRAM_FREQUENCIES = [125, 250, 500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000];
 const AUDIOGRAM_DB_MIN = -10;
 const AUDIOGRAM_DB_MAX = 120;
 
 // --- UTILITY FUNCTIONS ---
-const getText = (key) => mockStrings[currentLang]?.[key] || mockStrings['en']?.[key] || `[${key}]`;
+
 // Hardver állapot szimulációja. Később ez egy valódi API hívás lesz.
 function fetchDeviceStatus() {
     console.log("Szimuláció: Eszköz állapotának lekérdezése...");
@@ -205,22 +357,27 @@ function showNotification(messageKey) {
 function calculateAndDisplayAge(dobString) {
     const displayElement = document.getElementById('client-age-display');
     if (!dobString) {
-        displayElement.textContent = 'Nincs megadva';
+        displayElement.textContent = getText('age_not_specified');
         return;
     }
+
     const birthDate = new Date(dobString);
     const today = new Date();
+
     if (isNaN(birthDate.getTime())) {
-        displayElement.textContent = 'Érvénytelen dátum';
+        displayElement.textContent = getText('age_invalid_date');
         return;
     }
+
     let years = today.getFullYear() - birthDate.getFullYear();
     let months = today.getMonth() - birthDate.getMonth();
+    
     if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
         years--;
         months += 12;
     }
-    displayElement.textContent = `${years} év ${months} hónap`;
+
+    displayElement.textContent = `${years} ${getText('age_year')} ${months} ${getText('age_month')}`;
 }
 
 function updateAccordionHeader(accordionItem) {
@@ -269,6 +426,7 @@ function populateLanguageSelector() {
 }
 
 function updateUiText() {
+    document.getElementById('header-title-text').textContent = getText('header_title'); // <-- ÚJ SOR
     document.getElementById('nav-clients').innerHTML = getText('nav_clients');
     document.getElementById('nav-calibration').innerHTML = getText('nav_calibration');
     document.getElementById('nav-log').innerHTML = getText('nav_log');
@@ -277,6 +435,8 @@ function updateUiText() {
 
 function changeLanguage(langCode) {
     currentLang = langCode;
+    localStorage.setItem('language', langCode); // <-- EZ AZ ÚJ SOR
+    document.documentElement.lang = langCode;
     populateLanguageSelector();
     renderPage(currentPage);
 }
@@ -427,10 +587,16 @@ function renderActivatePage() {
         ? `<ul>${mockDeviceState.syncedClients.map(name => `<li>${name}</li>`).join('')}</ul>`
         : `<p><small>${getText('sync_no_clients')}</small></p>`;
 
-    // Befejezési dátum formázása a megjelenítéshez
+    // --- JAVÍTOTT RÉSZ ---
+    // Megjelenítéskor döntjük el, mit írunk ki
+    const lastSyncDisplay = mockDeviceState.lastSync
+        ? new Date(mockDeviceState.lastSync).toLocaleString(currentLang === 'hu' ? 'hu-HU' : 'en-GB')
+        : getText('no_data_available');
+
     const endDateFormatted = mockDeviceState.trainingEndDate
-        ? new Date(mockDeviceState.trainingEndDate).toLocaleDateString('hu-HU')
-        : 'N/A';
+        ? new Date(mockDeviceState.trainingEndDate).toLocaleDateString(currentLang === 'hu' ? 'hu-HU' : 'en-GB')
+        : getText('no_data_available');
+    // --- JAVÍTÁS VÉGE ---
 
     contentArea.innerHTML = `
         <article>
@@ -441,7 +607,7 @@ function renderActivatePage() {
             <article>
                 <header><strong>${getText('sync_status_title')}</strong></header>
                 <p>
-                    <strong>${getText('sync_last_sync')}:</strong> ${mockDeviceState.lastSync}<br>
+                    <strong>${getText('sync_last_sync')}:</strong> ${lastSyncDisplay}<br>
                     <strong>${getText('training_end_date')}:</strong> ${endDateFormatted}<br>
                     <strong>${getText('sync_synced_clients')}:</strong>
                 </p>
@@ -470,34 +636,42 @@ async function synchronizeClients() {
 
     toggleModal(true);
     const modalContent = document.getElementById('modal-content');
-    modalContent.innerHTML = `<progress></progress>`; // Töltésjelző mutatása
+    modalContent.innerHTML = `<progress></progress>`;
 
     const status = await fetchDeviceStatus();
     
     let warnings = [];
-    if (!status.bt_connected) warnings.push("Nincs Bluetooth fejhallgató csatlakoztatva!");
-    if (status.m5_battery < 20) warnings.push("Az eszköz akkumulátora hamarosan lemerül!");
-    if (status.hs_battery < 20) warnings.push("A fejhallgató akkumulátora hamarosan lemerül!");
+    if (!status.bt_connected) warnings.push(getText('modal_warning_bt_disconnected'));
+    if (status.m5_battery < 20) warnings.push(getText('modal_warning_device_low_battery'));
+    if (status.hs_battery < 20) warnings.push(getText('modal_warning_headphone_low_battery'));
+
+    const btStatusText = status.bt_connected 
+        ? `${getText('modal_bt_connected')} (${status.bt_device_name})` 
+        : getText('modal_bt_disconnected');
+    
+    const hsBatteryText = status.hs_battery !== null 
+        ? status.hs_battery + '%' 
+        : getText('modal_battery_unknown');
 
     let statusHTML = `
-        <h4>Aktiválás Előtti Ellenőrzés</h4>
+        <h4>${getText('modal_pre_activation_check_title')}</h4>
         <ul>
-            <li>${status.bt_connected ? '✔' : '❌'} Bluetooth: ${status.bt_connected ? `Csatlakoztatva (${status.bt_device_name})` : 'Nincs kapcsolat'}</li>
-            <li>${status.m5_battery >= 20 ? '✔' : '⚠'} Eszköz Akkumulátor: ${status.m5_battery}%</li>
-            <li>${status.hs_battery >= 20 ? '✔' : '⚠'} Fejhallgató Akkumulátor: ${status.hs_battery !== null ? status.hs_battery + '%' : 'Ismeretlen'}</li>
+            <li>${status.bt_connected ? '✔' : '❌'} ${getText('modal_bt_status')}: ${btStatusText}</li>
+            <li>${status.m5_battery >= 20 ? '✔' : '⚠'} ${getText('modal_device_battery')}: ${status.m5_battery}%</li>
+            <li>${status.hs_battery >= 20 ? '✔' : '⚠'} ${getText('modal_headphone_battery')}: ${hsBatteryText}</li>
         </ul>
     `;
 
     if (warnings.length > 0) {
-        statusHTML += `<p><strong>Figyelem:</strong><br>${warnings.join('<br>')}</p>`;
+        statusHTML += `<p><strong>${getText('modal_warning_title')}</strong><br>${warnings.join('<br>')}</p>`;
     } else {
-        statusHTML += `<p>✔ Minden rendben, az eszköz készen áll az aktiválásra.</p>`;
+        statusHTML += `<p>✔ ${getText('modal_success_message')}</p>`;
     }
 
     statusHTML += `
         <div class="modal-actions">
-            <button id="modal-cancel" class="btn btn-secondary">Mégse</button>
-            <button id="modal-confirm" class="btn">${warnings.length > 0 ? 'Aktiválás Mindenképp' : 'Aktiválás'}</button>
+            <button id="modal-cancel" class="btn btn-secondary">${getText('modal_button_cancel')}</button>
+            <button id="modal-confirm" class="btn">${warnings.length > 0 ? getText('modal_button_activate_anyway') : getText('modal_button_activate')}</button>
         </div>
     `;
 
@@ -505,35 +679,31 @@ async function synchronizeClients() {
 
     document.getElementById('modal-cancel').onclick = () => toggleModal(false);
     document.getElementById('modal-confirm').onclick = () => {
-    const clientsToSync = mockClients.filter(client => selectedClientIds.includes(client.id));
-    console.log("ADATKÜLDÉS AZ ESZKÖZRE:", JSON.stringify(clientsToSync));
-    
-    // --- BŐVÍTETT RÉSZ ---
-    const activationDate = new Date();
-    let endDate = new Date(activationDate);
-    endDate.setDate(activationDate.getDate() + 10); // 10 nap hozzáadása
+        const clientsToSync = mockClients.filter(client => selectedClientIds.includes(client.id));
+        console.log("ADATKÜLDÉS AZ ESZKÖZRE:", JSON.stringify(clientsToSync));
+        
+        const activationDate = new Date();
+        let endDate = new Date(activationDate);
+        endDate.setDate(activationDate.getDate() + 10);
 
-    mockDeviceState.lastSync = activationDate.toLocaleString('hu-HU');
-    mockDeviceState.trainingEndDate = endDate; // Új dátum elmentése
-    mockDeviceState.syncedClients = clientsToSync.map(c => c.name);
-    // --- BŐVÍTETT RÉSZ VÉGE ---
-    
-    showNotification('sync_success_notification');
-    toggleModal(false);
-    renderActivatePage();
-};
+        mockDeviceState.lastSync = activationDate;
+        mockDeviceState.trainingEndDate = endDate;
+        mockDeviceState.syncedClients = clientsToSync.map(c => c.name);
+        
+        showNotification('sync_success_notification');
+        toggleModal(false);
+        renderActivatePage();
+    };
 }
+
 
 function clearDeviceClients() {
     if (confirm(getText('sync_clear_confirm'))) {
         console.log("COMMAND TO ESP32: Clear clients.json from LittleFS");
         
-        // --- JAVÍTOTT RÉSZ ---
-        // Visszaállítjuk az állapotot a kezdőértékekre
-        mockDeviceState.lastSync = "Nincs adat";
+        mockDeviceState.lastSync = null; // Visszaállítás null-ra
         mockDeviceState.syncedClients = [];
         mockDeviceState.trainingEndDate = null;
-        // --- JAVÍTÁS VÉGE ---
         
         showNotification('sync_cleared_notification');
         renderActivatePage();
@@ -782,8 +952,8 @@ function createBasicInfoHTML(client) {
                 <label>${getText('dob_label')}
                     <input name="client-dob" type="date" value="${client.dob || ''}">
                 </label>
-                <label>Életkor
-                    <output id="client-age-display">Nincs megadva</output>
+                <label>${getText('age_label')}
+                    <output id="client-age-display">${getText('age_not_specified')}</output>
                 </label>
             </div>
         </div>
